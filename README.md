@@ -49,6 +49,7 @@ height, width = img_gray.shape[:2]
 channels = 1 if img_gray.ndim == 2 else img_gray.shape[2]
 print("Width:", width, "Height:", height, "Channels:", channels)
 ```
+Width: 533 Height: 574 Channels: 1
 
 #### 3. Display the image using matplotlib imshow().
 ```python
@@ -57,12 +58,15 @@ plt.imshow(img_gray, cmap='gray')
 plt.title("Grayscale Image")
 plt.show()
 ```
+<img width="399" height="434" alt="download" src="https://github.com/user-attachments/assets/587e314d-62fc-49ec-ba8f-8ad4aae30df5" />
+
 
 #### 4. Save the image as a PNG file using OpenCV imwrite().
 ```python
 # 4. Save as PNG
 cv2.imwrite('lion_gray.png', img_gray)
 ```
+True
 
 #### 5. Read the saved image above as a color image using cv2.cvtColor().
 ```python
@@ -80,6 +84,7 @@ plt.show()
 height, width, channels = img_color.shape
 print("Width:", width, "Height:", height, "Channels:", channels)
 ```
+<img width="399" height="434" alt="download" src="https://github.com/user-attachments/assets/31e8a36f-9d4e-4fe9-bbf4-0448560d84bd" />
 
 #### 7. Crop the image to extract any specific (Eagle alone) object from the image.
 ```python
@@ -93,6 +98,7 @@ plt.imshow(img_cropped)
 plt.title("Cropped Lion")
 plt.show()
 ```
+<img width="399" height="434" alt="download" src="https://github.com/user-attachments/assets/bbff7484-682c-45bd-ba82-e41acac7a290" />
 
 #### 8. Resize the image up by a factor of 2x.
 ```python
@@ -102,6 +108,7 @@ plt.imshow(img_resized)
 plt.title("Resized (2x)")
 plt.show()
 ```
+<img width="399" height="434" alt="download" src="https://github.com/user-attachments/assets/b93e3558-4c8a-44ea-b815-9942ea61fb3e" />
 
 #### 9. Flip the cropped/resized image horizontally.
 ```python
@@ -111,6 +118,7 @@ plt.imshow(img_flipped)
 plt.title("Flipped Horizontally")
 plt.show()
 ```
+<img width="399" height="434" alt="download" src="https://github.com/user-attachments/assets/b3886570-61c7-4920-9c85-a50b72f93d8e" />
 
 #### 10. Read in the image ('Apollo-11-launch.jpg').
 ```python
@@ -120,6 +128,7 @@ img_jet = cv2.cvtColor(img_jet, cv2.COLOR_BGR2RGB)
 plt.imshow(img_jet)
 plt.show()
 ```
+<img width="552" height="378" alt="download" src="https://github.com/user-attachments/assets/f67bf327-8e44-4bf7-b713-894e318f3cac" />
 
 #### 11. Add the following text to the dark area at the bottom of the image (centered on the image):
 ```python
@@ -162,6 +171,7 @@ plt.imshow(img_annotated)
 plt.title("Annotated Image")
 plt.show()
 ```
+<img width="831" height="580" alt="download" src="https://github.com/user-attachments/assets/b11e5325-3acc-4aa4-892d-9623c452a8f7" />
 
 #### 14. Read the image ('Boy.jpg').
 ```python
@@ -171,6 +181,7 @@ img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 plt.imshow(img_rgb)
 plt.show()
 ```
+<img width="371" height="418" alt="download" src="https://github.com/user-attachments/assets/6f85b363-a86b-4b24-9de9-a6b62edc9793" />
 
 #### 15. Adjust the brightness of the image.
 ```python
@@ -194,6 +205,7 @@ plt.subplot(132); plt.imshow(cv2.cvtColor(img_darker, cv2.COLOR_BGR2RGB)); plt.t
 plt.subplot(133); plt.imshow(cv2.cvtColor(img_brighter, cv2.COLOR_BGR2RGB)); plt.title("Brighter Image"); plt.axis("off")
 plt.show()
 ```
+<img width="1158" height="426" alt="download" src="https://github.com/user-attachments/assets/8d24a1c8-cef8-45dc-9a9d-90e9b64d0d64" />
 
 #### 18. Modify the image contrast.
 ```python
@@ -217,6 +229,7 @@ plt.subplot(143); plt.imshow(cv2.cvtColor(img_higher1, cv2.COLOR_BGR2RGB)); plt.
 plt.subplot(144); plt.imshow(cv2.cvtColor(img_higher2, cv2.COLOR_BGR2RGB)); plt.title("Higher Contrast (1.2)"); plt.axis("off")
 plt.show()
 ```
+<img width="1415" height="408" alt="download" src="https://github.com/user-attachments/assets/87a4fdee-287d-4999-9624-f325415f38c0" />
 
 #### 20. Split the image (boy.jpg) into the B,G,R components & Display the channels.
 ```python
@@ -230,6 +243,7 @@ plt.subplot(143); plt.imshow(r, cmap='gray'); plt.title("Red Channel"); plt.axis
 plt.subplot(144); plt.imshow(img_rgb); plt.title("Original"); plt.axis("off")
 plt.show()
 ```
+<img width="1415" height="408" alt="download" src="https://github.com/user-attachments/assets/5fbe2b09-7ffa-4eee-9065-0de3c9643c01" />
 
 #### 21. Merged the R, G, B , displays along with the original image
 ```python
@@ -241,6 +255,7 @@ plt.subplot(121); plt.imshow(img_rgb); plt.title("Original"); plt.axis("off")
 plt.subplot(122); plt.imshow(cv2.cvtColor(merged_bgr, cv2.COLOR_BGR2RGB)); plt.title("Merged (B,G,R)"); plt.axis("off")
 plt.show()
 ```
+<img width="760" height="426" alt="download" src="https://github.com/user-attachments/assets/e8a7a1de-d018-4590-aa3a-31899375dd84" />
 
 #### 22. Split the image into the H, S, V components & Display the channels.
 ```python
@@ -255,6 +270,8 @@ plt.subplot(143); plt.imshow(val, cmap='gray'); plt.title("Value"); plt.axis("of
 plt.subplot(144); plt.imshow(img_rgb); plt.title("Original"); plt.axis("off")
 plt.show()
 ```
+<img width="1415" height="408" alt="download" src="https://github.com/user-attachments/assets/e9e203eb-5636-43ae-b5de-2f17377b2f67" />
+
 #### 23. Merged the H, S, V, displays along with original image.
 ```python
 # 23. Merge H, S, V and display with the original
@@ -266,36 +283,19 @@ plt.subplot(121); plt.imshow(img_rgb); plt.title("Original"); plt.axis("off")
 plt.subplot(122); plt.imshow(merged_hsv_rgb); plt.title("Merged (H,S,V)"); plt.axis("off")
 plt.show()
 ```
+<img width="760" height="426" alt="download" src="https://github.com/user-attachments/assets/86a733ed-05a3-4046-872b-d8d9601ba197" />
 
 ## Output:
-- **i)** Read and Display an Image.  
-- **ii)** Adjust Image Brightness.  
-- **iii)** Modify Image Contrast.  
-- **iv)** Generate Third Image Using Bitwise Operations.
-```python
-rectangle = np.zeros((200, 400), dtype=np.uint8)
-cv2.rectangle(rectangle, (30, 30), (370, 170), 255, -1)
+- **i)** Read and Display an Image.
+<img width="501" height="518" alt="image" src="https://github.com/user-attachments/assets/b3e6e942-7907-4094-910a-9fb0ee8f1dc1" />
 
-circle = np.zeros((200, 400), dtype=np.uint8)
-cv2.circle(circle, (200, 100), 90, 255, -1)
+- **ii)** Adjust Image Brightness.
+<img width="1402" height="507" alt="image" src="https://github.com/user-attachments/assets/6a1776fd-0c20-4f4a-ae42-364310760f95" />
 
-result_and = cv2.bitwise_and(rectangle, circle)
-result_or  = cv2.bitwise_or(rectangle, circle)
-result_xor = cv2.bitwise_xor(rectangle, circle)
-result_not = cv2.bitwise_not(rectangle)
+- **iii)** Modify Image Contrast.
+<img width="1395" height="397" alt="image" src="https://github.com/user-attachments/assets/1a258df1-1084-4ca7-8eb6-b80b9cba0323" />
 
-titles = ["Rectangle", "Circle", "AND", "OR", "XOR", "NOT (Rectangle)"]
-images = [rectangle, circle, result_and, result_or, result_xor, result_not]
 
-plt.figure(figsize=(15, 6))
-for i in range(6):
-    plt.subplot(2, 3, i + 1)
-    plt.imshow(images[i], cmap='gray')
-    plt.title(titles[i])
-    plt.axis("off")
-plt.show()
-```
-<img width="850" height="338" alt="image" src="https://github.com/user-attachments/assets/85c3322d-31a9-418f-89d1-063be9e11815" />
 
 
 ## Result:
